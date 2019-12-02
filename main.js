@@ -12,7 +12,7 @@ $('.imgrate').slideUp(400);
 console.log(pname)
 $.ajax({
 type: "POST",
-url: "php/fono.php",
+url: "https://all-polling.in/phonedetails/php/fono.php",
 data: {pname:pname},
 dataType: "json",
 success: function (response) {
@@ -46,7 +46,7 @@ $('.imgrate').slideUp(400);
 // console.log(pname)
 $.ajax({
 type: "POST",
-url: "php/fono.php",
+url: "https://all-polling.in/phonedetails/php/fono.php",
 data: {pname:pname},
 dataType: "json",
 success: function (response) {
