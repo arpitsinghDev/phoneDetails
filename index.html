@@ -170,7 +170,7 @@
                 dataType: "json",
                 //dataType: "text",
                 success: function (response) {
-                    console.log(response);
+                   // console.log(response);
                     $('.imgrate').html("<div class='cone'></div><div class='ctwo'></div>")
                      $('#loadingbox').hide(100);
                      
@@ -212,7 +212,7 @@
             data: {prename:"Redmi 8A"},
             dataType: "json",
             success: function (response) {
-                console.log(response);
+                //console.log(response);
                 $('.perloadcon').html("<a target='_blank' href="+response[0]['m_producturl']+"><img src='"+response[0]['m_img']+"'></a>");
                 $('.perloadcon').append("<h5>"+response[0]['m_name']+"</h5>");
                 $('.perloadcon').append("<p>"+response[0]['m_flipkardprice']['amount']+"<span>"+response[0]['m_flipkardprice']['currency']+"</span> <span> (" +response[0]['m_discount']+ "%)Off</span></p>");
