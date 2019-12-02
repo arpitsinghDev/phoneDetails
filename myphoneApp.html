@@ -165,7 +165,7 @@
                      $('.api').css({'display':'grid','gridTemplateColumns':'50% 50%'})
                 $.ajax({
                 type: "POST",
-                url: "php/fono.php",
+                url: "https://all-polling.in/phonedetails/php/fono.php",
                 data: {opone:opone, optwo:optwo},
                 dataType: "json",
                 //dataType: "text",
@@ -193,7 +193,7 @@
             let opdata=$('#phonebox').val();
             $.ajax({
                 type: "POST",
-                url: "php/fono.php",
+                url: "https://all-polling.in/phonedetails/php/fono.php",
                 data: {opdata:opdata},
                 //dataType: "text",
                 success: function (response) {
@@ -208,7 +208,7 @@
         
         $.ajax({
             type: "post",
-            url: "php/fono.php",
+            url: "https://all-polling.in/phonedetails/php/fono.php",
             data: {prename:"Redmi 8A"},
             dataType: "json",
             success: function (response) {
@@ -230,7 +230,7 @@
           
         $.ajax({
             type: "POST",
-            url: "php/fono.php",
+            url: "https://all-polling.in/phonedetails/php/fono.php",
             data: "loaded",
             dataType: "json",
             success: function (response) {
