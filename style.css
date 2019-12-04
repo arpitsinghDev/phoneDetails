@@ -255,3 +255,10 @@ footer a{
 .imgrate img{
     width: 70%;
 }
+.main{
+    position: relative;
+    width: 98%;
+    min-height: 72%;
+    padding-left: 2%;
+    font-family:'Poppins';
+}
