@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="../style.css">
     <style>
         .maindata >div{
+            margin-top: 15px;
             display: grid;
             grid-template-areas:
-                'img details'
-                'api api';
+                'img details sp'
+                'api api api';
         }
         .maindata >div>a{
             grid-area: img;
@@ -118,7 +119,8 @@
     <script src="../jquery.js"></script>
     <script>
         $(document).ready(function () {
-            var path="../../php/fono.php";
+            //var path="../../php/fono.php";
+            var path="https://all-polling.in/phonedetails/php/fono.php";
             
             let phonelist=['Redmi 8A','samsung galaxy j7 nxt','Realme 3i','Infinix Smart','TECNO Spark Go','Gionee x1s','vivo Y91i','oppo a71','Samsung Galaxy M10S'];
             console.log(phonelist);
