@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Top 10 Budget Phones (letest) | android mobiles</title>
-    <link rel="icon" type="img/jpg" href="phoneComparelogo.jpg">
+    <link rel="icon" type="img/jpg" href="../phoneComparelogo.jpg">
     <link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <style>
-        
+        .maindata >div{
+            display: grid;
+            grid-template-areas:
+                'img details'
+                'api api';
+        }
+        .maindata >div>a{
+            grid-area: img;
+        }
+        .maindata >div>.details{
+            grid-area: details;
+        }
+        .maindata >div>.api{
+            grid-area: api;
+        }
         /* resposive */
         @media only screen and (max-width:980px) {
         .perloadcon{
@@ -83,12 +97,17 @@
     <div class="logo">Phone Details</div>
     <h1>Top 10 Budget Smartphones for low price</h1>
     <div class="main">
-        <div class="datacon">
-            <div class="imgrate">
-            </div>
-                <div class="api">
-                        you're phone details
-                </div>
+        <div class="maindata">
+           <div class="budgetdevice0"></div>
+           <div class="budgetdevice1"></div>
+           <div class="budgetdevice2"></div>
+           <div class="budgetdevice3"></div>
+           <div class="budgetdevice4"></div>
+           <div class="budgetdevice5"></div>
+           <div class="budgetdevice6"></div>
+           <div class="budgetdevice7"></div>
+           <div class="budgetdevice8"></div>
+           <div class="budgetdevice9"></div>
         </div>
     </div>
     <footer>
@@ -99,7 +118,49 @@
     <script src="../jquery.js"></script>
     <script>
         $(document).ready(function () {
-            alert('hello');
+            var path="../../php/fono.php";
+            
+            let phonelist=['Redmi 8A','samsung galaxy j7 nxt','Realme 3i','Infinix Smart','TECNO Spark Go','Gionee x1s','vivo Y91i','oppo a71','Samsung Galaxy M10S'];
+            console.log(phonelist);
+            for (let i = 0; i < phonelist.length; i++) {
+                //console.log(phonelist);
+                $.ajax({
+                    type: "post",
+                    url: path,
+                    data: {pname:phonelist[i]},
+                    dataType: "json",
+                    success: function (response) {
+                        //console.log(i)
+                        console.log(response)
+                        for (let j = 0; j < response.length; j++) {
+                           
+                            if(response[j].hasOwnProperty("m_name")){
+                            //$('.budgetdevice'+i).append("<h2>"+response[j]['m_name']+"</h2>");
+                            $('.budgetdevice'+i).append("<a target='_blank' href="+response[j]['m_producturl']+"><img src="+response[j]['m_img']+" alt="+response[j]['m_name']+"></a>");
+                            $('.budgetdevice'+i).append("<div class='details'><h3 id='name'>"+response[j]['m_name']+"</h3><span>"+response[j]['m_flipkardprice']['amount']+" "+response[j]['m_flipkardprice']['currency']+"</span> <span> " +response[j]['m_discount']+ "%off</span><br><a target='_blank' href="+response[j]['m_producturl']+" class='buynow'>BUY NOW</a></div>");
+                            showdetail(phonelist[i],i);
+                        }
+                    }
+                              
+                    }
+                });
+            }
+            function showdetail(a,pos){
+               //console.log(a +""+ pos);
+                $.ajax({
+                type: "POST",
+                url: "https://all-polling.in/phonedetails/php/fono.php",
+                data: {opdata:a},
+                //dataType: "text",
+                success: function (response) {
+                    //$('#loadingbox').hide(100);
+                    $('.budgetdevice'+pos).append("<div class='api'></div>");
+                    $('.budgetdevice'+pos+' .api').append('<table class="table"><th>Feature</th><th>Details</th>'+response+'</table>');
+                    //$('.api').slideToggle(1500);
+                    //showimg();
+                }
+            });
+            }
         });
     </script>
 </body>
