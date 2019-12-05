@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Top 10 Budget Phones (letest) | android mobiles</title>
+    <meta name="keywords" content="top 10 budget phones, Top Budget Phones, best mobiles for low price, top mobile in cheap price, latest babget phone">
+    <meta name="description" content="top budget phones in low price latest brand cantent features and latest update of mobiles">
     <link rel="icon" type="img/jpg" href="../phoneComparelogo.jpg">
     <link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
@@ -12,6 +14,21 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        h1{
+            font-family:'Roboto',sans-serif;
+        }
+        .nav{
+            font-size: 30px;
+            text-align: center;
+        }
+        .nav a,#end{
+            text-decoration: none;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
         .maindata >div{
             margin-top: 15px;
             display: grid;
@@ -91,6 +108,17 @@
         .datacon{
             margin-top: 25%;
         }
+        .maindata >div{
+            grid-template-areas:
+                'img details'
+                'api api';
+        }
+        .maindata >div img{
+            width:100%;
+        }
+        .nav{
+            font-size: 20px;
+        }
     }
     </style>
 </head>
@@ -98,23 +126,31 @@
     <div class="logo">Phone Details</div>
     <h1>Top 10 Budget Smartphones for low price</h1>
     <div class="main">
-        <div class="maindata">
-           <div class="budgetdevice0"></div>
-           <div class="budgetdevice1"></div>
-           <div class="budgetdevice2"></div>
-           <div class="budgetdevice3"></div>
-           <div class="budgetdevice4"></div>
-           <div class="budgetdevice5"></div>
-           <div class="budgetdevice6"></div>
-           <div class="budgetdevice7"></div>
-           <div class="budgetdevice8"></div>
-           <div class="budgetdevice9"></div>
+        <div class="nav" id='nav'>
+            <a href="#device1">1</a> <a href="#device2">2</a>
+            <a href="#device3">3</a> <a href="#device4">4</a>
+            <a href="#device5">5</a> <a href="#device6">6</a>
+            <a href="#device7">7</a> <a href="#device8">8</a>
+            <a href="#device9">9</a> <a href="#device10">10</a>
         </div>
+        <div class="maindata">
+           <div class="budgetdevice0" id="device1"></div>
+           <div class="budgetdevice1" id="device2"></div>
+           <div class="budgetdevice2" id="device3"></div>
+           <div class="budgetdevice3" id="device4"></div>
+           <div class="budgetdevice4" id="device5"></div>
+           <div class="budgetdevice5" id="device6"></div>
+           <div class="budgetdevice6" id="device7"></div>
+           <div class="budgetdevice7" id="device8"></div>
+           <div class="budgetdevice8" id="device9"></div>
+           <div class="budgetdevice9" id="device10"></div>
+        </div>
+        <a href="#nav" id='end'>Go Top</a>
     </div>
     <footer>
-        <a href="myphoneApp.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="../myphoneApp.html">Home</a>
+        <a href="../about.html">About Us</a>
+        <a href="../contact.html">Contact Us</a>
     </footer>
     <script src="../jquery.js"></script>
     <script>
@@ -123,8 +159,8 @@
             var path="https://all-polling.in/phonedetails/php/fono.php";
             
             let phonelist=['Redmi 8A','samsung galaxy j7 nxt','Realme 3i','Infinix Smart','TECNO Spark Go','Gionee x1s','vivo Y91i','oppo a71','Samsung Galaxy M10S'];
-            console.log(phonelist);
-            for (let i = 0; i < phonelist.length; i++) {
+           // console.log(phonelist);
+            for (let i = 7; i < phonelist.length; i++) {
                 //console.log(phonelist);
                 $.ajax({
                     type: "post",
@@ -139,7 +175,7 @@
                             if(response[j].hasOwnProperty("m_name")){
                             //$('.budgetdevice'+i).append("<h2>"+response[j]['m_name']+"</h2>");
                             $('.budgetdevice'+i).append("<a target='_blank' href="+response[j]['m_producturl']+"><img src="+response[j]['m_img']+" alt="+response[j]['m_name']+"></a>");
-                            $('.budgetdevice'+i).append("<div class='details'><h3 id='name'>"+response[j]['m_name']+"</h3><span>"+response[j]['m_flipkardprice']['amount']+" "+response[j]['m_flipkardprice']['currency']+"</span> <span> " +response[j]['m_discount']+ "%off</span><br><a target='_blank' href="+response[j]['m_producturl']+" class='buynow'>BUY NOW</a></div>");
+                            $('.budgetdevice'+i).append("<div class='details'><h3 id='name'>"+response[j]['m_name']+"</h3><span>"+response[j]['m_flipkardprice']['amount']+" "+response[j]['m_flipkardprice']['currency']+"</span> <span> " +response[j]['m_discount']+ "%off</span><br><span class='offer'>Flipkard "+response[j]['m_specialprice']['amount']+"/- "+response[j]['m_flipkardprice']['currency']+"</span> <a target='_blank' href="+response[j]['m_producturl']+" class='buynow'> BUY NOW</a></div>");
                             showdetail(phonelist[i],i);
                         }
                     }
