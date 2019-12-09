@@ -210,9 +210,8 @@
                            
                             if(response[j].hasOwnProperty("m_name")){
                             //$('.budgetdevice'+i).append("<h2>"+response[j]['m_name']+"</h2>");
-                            $('.budgetdevice'+i).append("<a target='_blank' href="+response[j]['m_producturl']+"><img src="+response[j]['m_img']+" alt="+response[j]['m_name']+"></a>");
                             $('.budgetdevice'+i).append("<div class='details'><h3 id='name'>"+response[j]['m_name']+"</h3><span>"+response[j]['m_flipkardprice']['amount']+" "+response[j]['m_flipkardprice']['currency']+"</span> <span> " +response[j]['m_discount']+ "%off</span><br><span class='offer'>Flipkard "+response[j]['m_specialprice']['amount']+"/- "+response[j]['m_flipkardprice']['currency']+"</span> <a target='_blank' href="+response[j]['m_producturl']+" class='buynow'> BUY NOW</a></div>");
-                            showdetail(phonelist[i],i);
+                            //showdetail(phonelist[i],i);
                         }
                     }
                               
