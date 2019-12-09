@@ -23,7 +23,7 @@ success: function (response) {
        // console.log('.imgrate '+b);;
     if(response[i].hasOwnProperty("m_name")){
         $('.imgrate .'+b).append("<a target='_blank' href="+response[i]['m_producturl']+"><img src="+response[i]['m_img']+"></a>");
-        $('.imgrate .'+b).append("<div class='details'><h3 id='name'>"+response[i]['m_name']+"</h3><span>"+response[i]['m_flipkardprice']['amount']+" "+response[i]['m_flipkardprice']['currency']+"</span> <span> " +response[i]['m_discount']+ "%off</span><br><a target='_blank' href="+response[i]['m_producturl']+" class='buynow'>BUY NOW</a></div>")
+        $('.imgrate .'+b).append("<div class='details'><h3 id='name'>"+response[i]['m_name']+"</h3><span>"+response[i]['m_flipkardprice']['amount']+" "+response[i]['m_flipkardprice']['currency']+"</span> <span> " +response[i]['m_discount']+ "%off</span><br><span class='offer'>Flipkard "+response[j]['m_specialprice']['amount']+"/- "+response[j]['m_flipkardprice']['currency']+"<a target='_blank' href="+response[i]['m_producturl']+" class='buynow'>BUY NOW</a></div>")
     }
     else{
         $('.optional').append("<div class='opcont"+i+"'></div>")
