@@ -133,7 +133,25 @@
     <script type="text/javascript">
         
     $('document').ready(function(){
-        
+        var c = new URLSearchParams(window.location.search).get("deviceName");
+        if(c!=undefined){
+            $('.api').slideToggle(1000);
+            $.ajax({
+                type: "POST",
+                url: "https://all-polling.in/phonedetails/php/fono.php",
+                //url: "/phoneCompair/php/fono.php",
+                data: {opdata:c},
+                //dataType: "text",
+                success: function (response) {
+                    $('#loadingbox').hide(100);
+                    $('.api').html('');
+                    $('.api').html('<table class="table"><th>Feature</th><th>Details</th>'+response+'</table>');
+                    $('.api').slideToggle(1500);
+                    showimg();
+                }
+            }); 
+        }
+        console.log(c)
         $('#loadingbox').hide();
         $('#btnmain').click(function(){
             $('#btndetail').hide(100);
