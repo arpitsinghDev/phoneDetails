@@ -268,4 +268,9 @@ footer a{
 .mainlink a{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    margin-top: 5px;
+}
+.links{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

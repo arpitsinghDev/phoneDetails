@@ -123,6 +123,7 @@
     </div>
     <div class="mainlink">
         <h3>Know more abuot latest phone</h3>
+        <div class="links"></div>
     </div>
     <footer>
         <a href="myphoneApp.html">Home</a>
@@ -264,7 +265,7 @@
             success: function (response) {
                 response.forEach(e => {
                 availableTags.push(e); 
-                $('.mainlink').append("<a href='/myphoneApp.html?deviceName="+encodeURI(e)+"'>"+e+"</a><br>")    
+                $('.mainlink>links').append("<a href='/myphoneApp.html?deviceName="+encodeURI(e)+"'>"+e+"</a><br>")    
                 });
                 
             }
