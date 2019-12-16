@@ -264,7 +264,7 @@
             success: function (response) {
                 response.forEach(e => {
                 availableTags.push(e); 
-                $('.mainlink').append("<a href='/myphoneApp.html?deviceName='"+encodeURI(e)+">"+e+"</a>")    
+                $('.mainlink').append("<a href='/myphoneApp.html?deviceName="+encodeURI(e)+"'>"+e+"</a><br>")    
                 });
                 
             }
