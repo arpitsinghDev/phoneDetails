@@ -121,6 +121,9 @@
         <span class="perloadcon">
         </span>
     </div>
+    <div class="mainlink">
+
+    </div>
     <footer>
         <a href="myphoneApp.html">Home</a>
         <a href="about.html">About Us</a>
@@ -151,7 +154,6 @@
                 }
             }); 
         }
-        console.log(c)
         $('#loadingbox').hide();
         $('#btnmain').click(function(){
             $('#btndetail').hide(100);
@@ -261,8 +263,10 @@
             dataType: "json",
             success: function (response) {
                 response.forEach(e => {
-               availableTags.push(e);     
+                availableTags.push(e); 
+                $('.mainlink').append("<a href='/myphoneApp.html?deviceName='"+encodeURI(e)+">"+e+"</a>")    
                 });
+                
             }
         });
   } );
