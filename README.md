@@ -1,1 +1,1 @@
-# phonedetails.all-polling.in
+# phonedetails.latestdev.tech
