@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Top 10 Budget Phones (letest) | android mobiles | phonedetails.all-polling.in</title>
+    <title>Top 10 Budget Phones (letest) | android mobiles | phonedetails.latestdev.tech</title>
     <meta name="keywords" content="top 10 budget phones, Top Budget Phones, best mobiles for low price, top mobile in cheap price, latest badget phone"/>
     <meta name="description" content="top budget phones in low price latest brand content features and latest update of mobiles (top 10 badget phones)"/>
-    <link rel="canonical" href="https://phonedetails.all-polling.in/budget-phones"/>
-    <meta property="og:site" content="phonedetails.all-polling.in"  />
-	<meta property="og:title" content="top 10 Budget Smartphones in India for (Latest)| phonedetails.all-polling.in" />
+    <link rel="canonical" href="https://phonedetails.latestdev.tech/budget-phones"/>
+    <meta property="og:site" content="phonedetails.latestdev.tech"  />
+	<meta property="og:title" content="top 10 Budget Smartphones in India for (Latest)| phonedetails.latestdev.tech" />
 	<meta property="og:type" content="product"  />
-	<meta property="og:url" content="https://phonedetails.all-polling.in/budget-phones"  />
+	<meta property="og:url" content="https://phonedetails.latestdev.tech/budget-phones"  />
 	<meta property="og:description" content="top budget phones in low price latest brand features price (Under 10000/-), performance and specifications"  />
     <link rel="icon" type="img/jpg" href="../phoneComparelogo.jpg">
     <link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet">
@@ -177,7 +177,7 @@
     <script>
         $(document).ready(function () {
             //var path="../../php/fono.php";
-            var path="https://all-polling.in/phonedetails/php/fono.php";
+            const path="php/fono.php";
             
             let phonelist=['Redmi 8A','samsung galaxy j7 nxt','Realme 3i','Infinix Smart','TECNO Spark Go','Gionee x1s','vivo Y91i','oppo a71','Samsung Galaxy M10S','Lenovo A6 Note'];
            // console.log(phonelist);
@@ -209,7 +209,7 @@
                //console.log(a +""+ pos);
                 $.ajax({
                 type: "POST",
-                url: "https://all-polling.in/phonedetails/php/fono.php",
+                url: path,
                 data: {opdata:a},
                 //dataType: "text",
                 success: function (response) {

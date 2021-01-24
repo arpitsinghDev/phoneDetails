@@ -12,9 +12,13 @@ body{
 .container{
     margin-top: 1%;
     width: 75%;
-    min-height: 85%;
+    height: auto;
+    min-height: 760px;
     margin-left: 1%;
     margin-right: 1%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
 }
 .form-control{
     margin: auto;
@@ -32,9 +36,11 @@ body{
 }
 #btndetail{
     background-color: #1524db;
+    border:1px solid #0000f0;
     color:white;
     font-size: 16px;
-    border-radius: 14px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000044;
 }
 #btndetail:focus{
     outline-offset: 0;
@@ -57,6 +63,7 @@ body{
     display: grid;
     grid-template-columns:60% 20% 20%;
     grid-template-rows: 100%;
+    grid-gap: 10px;
 }
 .deviname{
     width: 90%;
@@ -75,25 +82,22 @@ body{
     background-color: rgb(209, 231, 241);
 }
 .table{
-    background-color: #c7c7f3;
     width: 100%;
 }
 .table tr{
     margin-top: 1%;
-    border-bottom: 1px solid #6a6af5;
+    border-bottom: 1px solid #7171998c;
+    display: block;
 }
 .logo{
-    background-color:#0000f0;
-    width: 100%;
-    height: 8%;
-    min-height:50px;
-    display: block;
-    position: relative;
-    line-height: 50px;
-    color: #eceab7;
-    font-size: 35px;
-    font-family: 'Wallpoet', cursive;;
-    font-weight: 100;
+    background-color: #22228a;
+min-height: 70px;
+color: #eceab7;
+font-size: 35px;
+font-family: 'Wallpoet', cursive;
+display: flex;
+align-items: center;
+padding-left: 1%;
 }
 .form-com{
     display: none;
@@ -105,7 +109,7 @@ footer{
     margin-top: 1%;
     position: relative;
     width: 100%;
-    height: 10%;
+    height: 70px;
     background-color: black;
     bottom: 0;
 }
@@ -119,8 +123,8 @@ footer a{
 }
 .loading4{
     position: absolute;
-    left: 40%;
-    right: 50%;
+    left: 45%;
+    right: 45%;
     top: 50%;
 	width: 100px;
 	height: 100px;
@@ -156,10 +160,9 @@ footer a{
     }
 }
 .table > tbody > tr > td:nth-child(1) {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
     text-transform: capitalize;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .table > tbody th{
     font-size: 22px;
@@ -176,9 +179,7 @@ footer a{
     display: grid;
     grid-template-columns: auto auto;
 } */
-.table > tbody > tr > td:nth-child(2){
-    font-family:'Poppins', sans-serif;
-}
+
 .tableone{
     width:100%;
 }
@@ -209,7 +210,7 @@ footer a{
     height: 50%;
     text-align: center;
     min-height: 580px;
-    top:70px;
+    top:75px;
     right:0;
     border-radius: 10px;
     box-shadow: #bbc6e1 1px 1px 1px 1px;
@@ -249,28 +250,11 @@ footer a{
     display: grid;
     grid-template-columns:repeat(auto-fit,minmax(150px,auto));
 }
-.row h2{
-    font-family: sans-serif;
-}
-.imgrate img{
-    width: 70%;
-}
-.main{
-    position: relative;
-    width: 98%;
-    min-height: 72%;
+
+.m-data{
     padding-left: 2%;
-    font-family:'Poppins';
+position: relative;
 }
-.mainlink{
-    padding-left:10%;
-}
-.mainlink a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    margin-top: 5px;
-}
-.links{
-    display: grid;
-    grid-template-columns: 50% 50%;
+.cross-price{
+    text-decoration: line-through;
 }

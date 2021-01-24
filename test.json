@@ -1,0 +1,63 @@
+
+{…}
+​
+products: (1) […]
+​​
+0: {…}
+​​​
+categorySpecificInfoV1: Object { keySpecs: (5) […], detailedSpecs: (5) […], specificationList: (11) […], … }
+​​​
+productBaseInfoV1: {…}
+​​​​
+attributes: Object { size: "", color: "Black", storage: "16 GB", … }
+​​​​
+categoryPath: "Mobiles>Handsets"
+​​​​
+codAvailable: true
+​​​​
+discountPercentage: 0
+​​​​
+flipkartSellingPrice: Object { amount: 10990, currency: "INR" }
+​​​​
+flipkartSpecialPrice: Object { amount: 10990, currency: "INR" }
+​​​​
+imageUrls: {…}
+​​​​​
+200x200: "https://rukminim1.flixcart.com/image/200/200/j5crukw0/mobile…ng-j7-nxt-sm-j701fzkdins-original-imaew2em68ktztyv.jpeg?q=90"
+​​​​​
+400x400: "https://rukminim1.flixcart.com/image/400/400/j5crukw0/mobile…ng-j7-nxt-sm-j701fzkdins-original-imaew2em68ktztyv.jpeg?q=90"
+​​​​​
+800x800: "https://rukminim1.flixcart.com/image/800/800/j5crukw0/mobile…ng-j7-nxt-sm-j701fzkdins-original-imaew2em68ktztyv.jpeg?q=90"
+​​​​​
+<prototype>: Object { … }
+​​​​
+inStock: true
+​​​​
+maximumRetailPrice: Object { amount: 10990, currency: "INR" }
+​​​​
+offers: Array(3) [ "10% off on AU Bank Debit Cards", "5% Cashback on Flipkart Axis Bank Card", "No Cost EMI on Flipkart Axis Bank Credit Card" ]
+​​​​
+productBrand: "Samsung"
+​​​​
+productDescription: ""
+​​​​
+productFamily: Array(3) [ "MOBFYTD7BF99TNAK", "MOBEVYZYZUZFUHSJ", "MOBFYTD7ZMWAWRFW" ]
+​​​​
+productId: "MOBEVYZYWYEQVJK7"
+​​​​
+productUrl: "https://www.flipkart.com/samsung-galaxy-j7-nxt-black-16-gb/p/itmevyzyxnggkza6?pid=MOBEVYZYWYEQVJK7&affid=arpitsing5"
+​​​​
+title: "Samsung Galaxy J7 Nxt (Black, 16 GB)(2 GB RAM)"
+​​​​
+<prototype>: Object { … }
+​​​
+productShippingInfoV1: Object { estimatedDeliveryTime: "Usually Delivered within 3 days.", sellerName: "Sane Retails Private Limited", sellerNoOfRatings: 0, … }
+​​​
+<prototype>: Object { … }
+​​
+length: 1
+​​
+<prototype>: Array []
+​
+<prototype>: Object { … }
+phoneCompair:199:29

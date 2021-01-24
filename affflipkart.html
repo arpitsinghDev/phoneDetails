@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    curl -H "Fk-Affiliate-Id:<arpitsing5>" -H "Fk-Affiliate-Token:<b7d9e8ea26cb4772ae113a78962dfc2c>""https://affiliate-api.flipkart.net/affiliate/api/arpitsing5.json"
+</head>
+<body>
+    <h1>Check filpkart affilated api</h1>
+    <div class="respose">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" ></script>
+    <script>
+        $.ajax({
+         url: "https://affiliate-api.flipkart.net/affiliate/api/arpitsing5.json",
+         //url: curl -H Fk-Affiliate-Id:<arpitsing5> -H Fk-Affiliate-Token:<b7d9e8ea26cb4772ae113a78962dfc2c>https://affiliate-api.flipkart.net/affiliate/api/arpitsing5.json,
+        xhrFields: {
+      withCredentials: true
+   },
+        context: document.body
+        }).done(function(data) {
+                $( this ).addClass( "done" );
+                    console.log(data)
+                    });
+    </script>
+</body>
+</html>
